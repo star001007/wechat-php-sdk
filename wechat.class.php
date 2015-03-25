@@ -1021,7 +1021,7 @@ class Wechat
 		        return false;
 		    }
 		    $timestamp = time();
-		    $nonce = rand(77,999)*rand(605,888)*rand(11,99);
+		    $nonce = mt_rand(77,999)*mt_rand(605,888)*mt_rand(11,99);
 		    $encrypt = $array[1];
 		    $tmpArr = array($this->token, $timestamp, $nonce,$encrypt);//比普通公众平台多了一个加密的密文
 		    sort($tmpArr, SORT_STRING);
